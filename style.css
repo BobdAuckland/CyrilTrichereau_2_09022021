@@ -1,0 +1,221 @@
+/* ------------------
+Version Desktop +1040px
+------------------*/
+
+
+
+/* ----- POLICES AJOUTEES -----  */
+
+@font-face 
+{
+	font-family: 'roboto';
+	src: url('Police/Roboto.ttf');
+}
+
+
+
+
+/* ----- MISE EN PAGE TEXTE -----   */
+
+h1
+{
+
+}
+
+h2
+{
+
+}
+
+h3
+{
+
+}
+
+p
+{
+
+}
+
+a
+{
+
+}
+
+em
+{
+
+}
+
+
+
+
+
+
+/* ----- MISE EN PAGE IMAGE -----   */
+
+
+
+
+
+/*   ----- MISE EN PAGE BLOCS -----   */
+
+body
+{
+
+}
+        /*  ----- HEADER -----   */
+    header
+    {
+
+    }
+
+        #logo
+        {
+            width: 100px;
+        }
+
+        nav
+        {
+
+        }
+
+            #menuHebergement
+            {
+
+            }
+
+            #menuActivite
+            {
+                
+            }
+
+            #menuSinscrire
+            {
+                
+            }
+
+
+        /*  ----- MAIN -----   */
+    main
+    {
+
+    }
+
+          /*   SECTION 1   */
+        #section1
+        {
+
+        }
+
+            #search
+            {
+
+            }
+
+                #searchBar
+                {
+
+                }
+
+            #filtre
+            {
+
+            }
+
+                .filtreButton
+                {
+
+                }
+
+            #info
+            {
+
+            }
+    
+          /*   SECTION 2   */
+        #section2
+        {
+            
+        }
+
+            #blocImage2
+            {
+
+            }
+
+                .hebergement
+                {
+
+                }
+
+                    .stars
+                    {
+
+                    }
+
+
+
+
+    
+          /*   SECTION 3   */
+          #section3
+        {
+            
+        }
+
+            #section3Title
+            {
+
+            }
+
+            #blocImage3
+            {
+
+            }
+
+                .populaire
+                {
+
+                }
+
+
+    
+          /*   SECTION 4   */
+          #section4
+        {
+            
+        }
+
+            #blocImage4
+            {
+
+            }
+
+                .activite
+                {
+
+                }
+
+
+        /*  ----- FOOTER -----   */
+        footer
+    {
+
+    }
+
+        .menuFooter
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+
+
