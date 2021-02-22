@@ -8,28 +8,38 @@ Version Desktop +1040px
 
 @font-face 
 {
-	font-family: 'roboto';
-	src: url('Police/Roboto.ttf');
+	font-family: 'raleway';
+	src: url('Police/Raleway.ttf');
 }
 
+@font-face 
+{
+	font-family: 'ralewayBold';
+	src: url('Police/Raleway-Bold.ttf');
+}
 
 
 
 /* ----- MISE EN PAGE TEXTE -----   */
 
+body
+{
+    font-family: "raleway", "Arial Black", Arial, Verdana, sans-serif;
+}
+
 h1
 {
-
+    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
 }
 
 h2
 {
-
+    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
 }
 
 h3
 {
-
+    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
 }
 
 p
@@ -39,12 +49,15 @@ p
 
 a
 {
-
+    text-decoration: none;
+    color: black;
 }
 
 em
 {
-
+    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
+    font-style: normal;
+    
 }
 
 
@@ -62,37 +75,57 @@ em
 
 body
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
 }
         /*  ----- HEADER -----   */
     header
     {
-
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -2.5em;
     }
 
         #logo
         {
             width: 100px;
+            padding-top: 50px;
+
         }
 
         nav
         {
-
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
         }
 
             #menuHebergement
             {
-
+                margin: 2em;
+                color: #0065FC;
+                border-top: 2px solid #0065FC;
+                padding-top: 50px;
             }
 
             #menuActivite
             {
-                
+                margin: 2em;
+                padding-top: 52px;                
             }
 
             #menuSinscrire
             {
-                
+                margin: 2em;
+                color: #0065FC;
+                font-family: "ralewayBold";
+                padding-top: 52px;               
             }
 
 
