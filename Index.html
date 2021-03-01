@@ -59,41 +59,40 @@
         <div id="search">
           <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
           <p>En plein centre ville ou en pleine nature</p>
-          <div id="searchBar">
-              <i class="fas fa-map-marker-alt" id="hereButton" alt="Localisez moi" title="Localisez moi"></i>
-              <form action="" method="get" accept-charset="utf-8">
-                
-              </form>
-          </div>
+          <form action="" method="get" accept-charset="utf-8" id="searchBar">
+            <i class="fas fa-map-marker-alt" id="hereButton" alt="Localisez moi" title="Localisez moi"></i>
+            <input id="adressBar" type="text" name="adress" placeholder="Marseille, France" size="30" required>
+            <input id="searchButton" type="submit" value="Rechercher">
+          </form>
         </div>
         
         <div id="filter">
           <h2>Filtres</h2>
           
-          <div class="filterButton">
-            <i class="fas fa-money-bill-wave-alt" alt="Economique" title="Economique"></i>
-            <p>Economique</p>
-          </div>    
+          <a href="" class="filterButton">
+            <div class="textFilter"><p>Economique</p></div>
+            <span class="iconeFilter" style="font-size: 0.8em; color: #0065FC;"><i class="fas fa-money-bill-wave-alt" alt="Economique" title="Economique"></i></span>
+          </a>    
           
-          <div class="filterButton">
-            <i class="fas fa-child" alt="Familial" title="Familial"></i>
-            <p>Familial</p>
-          </div>
+          <a href="" class="filterButton">
+            <div class="textFilter"><p>Familial</p></div>
+            <span class="iconeFilter" style="font-size: 0.8em; color: #0065FC;"><i class="fas fa-child" alt="Familial" title="Familial"></i></span>
+          </a>
+           
+          <a href="" class="filterButton">
+            <div class="textFilter"><p>Romantique</p></div>
+            <span class="iconeFilter" style="font-size: 0.8em; color: #0065FC;"><i class="fas fa-heart" alt="Romantique" title="Romantique"></i></span>
+          </a>
                   
-          <div class="filterButton">
-            <i class="fas fa-heart" alt="Romantique" title="Romantique"></i>
-            <p>Romantique</p>
-          </div>
-                  
-          <div class="filterButton">
-            <i class="fas fa-dog" alt="Animaux autorisés" title="Animaux autorisés"></i>
-            <p>Animaux autorisés</p>
-          </div>
+          <a href="" class="filterButton">
+            <div class="textFilter"><p>Animaux autorisés</p></div>
+            <span class="iconeFilter" style="font-size: 0.8em; color: #0065FC;"><i class="fas fa-dog" alt="Animaux autorisés" title="Animaux autorisés"></i></span>
+          </a>
         </div>
         
         <div id="info">
-          <i class="fas fa-info" alt="Info" title="Info"></i>
-          <p>Plus de 500 logements sont disponibles dans cette ville</p>
+          <span id="infoIcon" style="font-size: 0.6em; color: #0065FC;"><i class="fas fa-info" alt="Info" title="Info"></i></span>
+          <p>Plus de 500 logements sont disponibles dans cette ville</p></div>
         </div>
         
       </div>
@@ -104,7 +103,7 @@
         
         <div id="blockAccommodationMarseilles">
           <div class="accommodation">
-            <img src="image/4_small_hebergement_07.jpg" alt="Auberge de la Cannebière" title="Auberge de la Cannebière"/>
+            <img class="accomodationImages" src="image/4_small_hebergement_07.jpg" alt="Auberge de la Cannebière" title="Auberge de la Cannebière"/>
             <h3>Auberge de la Cannebière</h3>
             <p>Nuit à partir de <em>25 €</em></p>
             <div class="fourStars">
@@ -117,7 +116,7 @@
           </div>
           
           <div class="accommodation">
-            <img src="image/4_small_hebergement_01.jpg" alt="Hôtel de la mer" title="Hôtel de la mer" />
+            <img class="accomodationImages" src="image/4_small_hebergement_01.jpg" alt="Hôtel de la mer" title="Hôtel de la mer" />
             <h3>Hôtel de la mer</h3>
             <p>Nuit à partir de <em>46 €</em></p>
             <div class="threeStars">
@@ -130,7 +129,7 @@
           </div>
           
           <div class="accommodation">
-            <img src="image/4_small_hebergement_06.jpg" alt="Hôtel du port" title="Hôtel du port" />
+            <img class="accomodationImages" src="image/4_small_hebergement_06.jpg" alt="Hôtel du port" title="Hôtel du port" />
             <h3>Hôtel du port</h3>
             <p>Nuit à partir de <em>52 €</em></p>
             <div class="fiveStars">
@@ -143,7 +142,7 @@
           </div>
           
           <div class="accommodation">
-            <img src="image/4_small_hebergement_08.jpg" alt="Auberge Le Panier" title="Auberge Le Panier" />
+            <img class="accomodationImages" src="image/4_small_hebergement_08.jpg" alt="Auberge Le Panier" title="Auberge Le Panier" />
             <h3>Auberge Le Panier</h3>
             <p>Nuit à partir de <em>23 €</em></p>
             <div class="fourStars">
@@ -156,7 +155,7 @@
           </div>
           
           <div class="accommodation">
-            <img src="image/4_small_hebergement_09.jpg" alt="Hôtel Les mouettes" title="Hôtel Les mouettes" />
+            <img class="accomodationImages" src="image/4_small_hebergement_09.jpg" alt="Hôtel Les mouettes" title="Hôtel Les mouettes" />
             <h3>Hôtel Les mouettes</h3>
             <p>Nuit à partir de <em>76 €</em></p>
             <div class="fourStars">
@@ -169,7 +168,7 @@
           </div>
           
           <div class="accommodation">
-            <img src="image/4_small_hebergement_04.jpg" alt="Hôtel chez Amina" title="Hôtel chez Amina" />
+            <img class="accomodationImages" src="image/4_small_hebergement_04.jpg" alt="Hôtel chez Amina" title="Hôtel chez Amina" />
             <h3>Hôtel chez Amina</h3>
             <p>Nuit à partir de <em>96 €</em></p>
             <div class="fiveStars">

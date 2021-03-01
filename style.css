@@ -24,7 +24,8 @@ h1 {    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
 }
 
 h2 {    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
-        font-size: 0.9em;
+        font-size: 0.7em;
+        padding-right: 2em;
 }
 
 h3 {    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
@@ -45,8 +46,28 @@ em {font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
 h1 + p{ font-size: 0.8em;
 }
 
+#menuAccommodation a {  color: #0065FC;
+                        font-size: 0.7em;
+}
 
+#menuActivities a {font-size: 0.7em;
+}
 
+#menuSubscribe a {  color: #0065FC;
+    font-family: "ralewayBold";
+    font-size: 0.7em;
+}
+
+.textFilter { font-size: 0.7em;
+            font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
+            padding-left: 3em;
+            vertical-align: middle;
+            text-align: left;
+}
+
+#info p {   font-size: 0.8em;
+            padding-left: 1em;
+}
 
 
 
@@ -75,8 +96,8 @@ body {  margin-left: 3.47%;
 
         nav {   display: flex;
                 flex-direction: row;
-                justify-content: center;
-                align-items: flex-end;
+                justify-content: flex-end;
+                align-items: center;
         }
 
             #menuAccommodation {  margin: 2em;
@@ -84,21 +105,14 @@ body {  margin-left: 3.47%;
                                 padding-top: 50px;
             }
 
-            #menuAccommodation a { color: #0065FC;
-            }
-
             #menuActivities { margin: 2em;
                             padding-top: 52px;                
             }
 
             #menuSubscribe {    margin: 2em;
-                                color: #0065FC;
-                                font-family: "ralewayBold";
                                 padding-top: 52px;               
             }
 
-            #menuSubscribe a { color: #0065FC;
-            }
 
 
         /*  ----- MAIN -----   */
@@ -111,41 +125,112 @@ body {  margin-left: 3.47%;
 
         }
 
-            #search {
-
+            #search {   
             }
 
-                #searchBar {
-
+                #searchBar {display: flex;
+                            flex-direction: row;
+                            justify-content: left;
+                            align-items: center;
                 }
 
-            #filter {
-
-            }
-
-                .filterButton {
-
+                #hereButton {   background-color: #F2F2F2;
+                                padding: 0.6em 1em 0.6em 1em;
+                                border-radius: 10px 0 0 10px;
+                }
+                #adressBar {    font-family: "ralewayBold";
+                                border: none;
+                }
+                #searchButton { background-color: #0065FC;
+                                color: white;
+                                padding: 0.6em 1em 0.6em 1em;
+                                border: none;
+                                border-radius: 0 10px 10px 0;
                 }
 
-            #info {
+            #filter {   display: flex;
+                        flex-direction: row;
+                        justify-content: left;
+                        align-items: center;
+                        padding-top: 1em;
 
             }
+
+                .filterButton { display: flex;
+                                flex-direction: row-reverse;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 1em;
+                }
+                    .iconeFilter{   padding: 1em;
+                                    background-color: #DEEBFF;
+                                    border-radius: 50%;
+                                    width: 15px;
+                                    height: 15px;
+                                    object-fit: cover;
+                                    object-position: center;
+                    }
+
+                    .textFilter {   border-top: 1px solid #d9d9d9;
+                                    border-right: 1px solid #d9d9d9;
+                                    border-bottom: 1px solid #d9d9d9;
+                                    border-radius: 0 25px 25px 0;
+                                    width: 100px;
+                                    margin-left: -2em;
+                                    height: 37px;
+                    }
+
+            #info { display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+
+            }
+                #infoIcon { border: 1px  #d9d9d9 solid;
+                            border-radius: 50%;
+                            width: 20px;
+                            height: 20px;
+                            object-fit: cover;
+                            object-position: center;
+                }
     
           /*   SECTION - ACCOMODATION IN MARSEILLES   */
         #accommodationMarseilles {
-            
+            padding: 40px;
+            background-color: #F2F2F2;
+            border-radius: 25px;
+            width: 880px;
+            height: 630px;
+
         }
 
-            #blocAccommodationMarseilles {
-
+            #blockAccommodationMarseilles {
+                height: 430px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: stretch;
             }
 
                 .accommodation {
-
+                    width: 28.1%;
+                    height: 31.75%;
+                    padding: 4px;
+                    background-color: white;
+                    border-radius: 25px;
+                    box-shadow: 0px 0px 5px 0px #000000;;
                 }
 
                     .fourStars, .threeStars, .fiveStars {
 
+                    }
+
+                    .accomodationImages {   
+                        width: 100%;
+                        height: 60.53%;
+                        border-radius: 25px 25px 0 0;
+                        object-fit: cover;
+                        object-position: center;
                     }
 
 
