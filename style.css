@@ -4,6 +4,13 @@ Desktop Version +1040px
 
 
 
+
+
+
+
+
+
+
 /* ----- FONTS ADDED -----  */
 
 @font-face {font-family: 'raleway';src: url('Police/Raleway.ttf');
@@ -14,21 +21,42 @@ Desktop Version +1040px
 
 
 
+
+
+
+
+
+
+
+
 /* ----- LAYOUT TEXT -----   */
 
 body {  font-family: "raleway", "Arial Black", Arial, Verdana, sans-serif;
 }
 
 h1 {    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
-        font-size: 1em;
+        font-size: 1.4em;
 }
 
 h2 {    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
-        font-size: 0.7em;
-        padding-right: 2em;
+        font-size: 1.35em;
+        padding-left: 0.5em;
 }
 
 h3 {    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
+    font-size: 1em;
+    padding-top: 1em;
+}
+
+h4 {    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
+    font-size: 1em;
+    padding-left: 0.6em;
+    margin-top: -0.001em;
+    margin-bottom: -0.5em;
+}
+
+h4 + p, h4 + em {   font-size: 1em;
+    padding-left: 0.6em;
 }
 
 p{
@@ -43,35 +71,54 @@ em {font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
     font-style: normal; 
 }
 
-h1 + p{ font-size: 0.8em;
+h1 + p{ font-size: 1em;
 }
 
 #menuAccommodation a {  color: #0065FC;
-                        font-size: 0.7em;
+                        font-size: 0.9em;
 }
 
-#menuActivities a {font-size: 0.7em;
+#menuActivities a {font-size: 0.9em;
 }
 
 #menuSubscribe a {  color: #0065FC;
     font-family: "ralewayBold";
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
-.textFilter { font-size: 0.7em;
+#filterTitle {    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
+    font-size: 1em;
+    padding-right: 2em;
+    padding-left: 1em;
+}
+
+.textFilter { font-size: 1em;
             font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
             padding-left: 3em;
             vertical-align: middle;
             text-align: left;
 }
 
-#info p {   font-size: 0.8em;
+#info p {   font-size: 1em;
             padding-left: 1em;
+}
+
+#more { padding: 2em 0 0 2em;
 }
 
 
 
-/* ----- LAYOUT IMAGE -----   */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -84,14 +131,20 @@ body {  margin-left: 3.47%;
 }
 
 
+
+
+
+
+
         /*  ----- HEADER -----   */
-    header {    display: grid;
-                grid-template-columns: 7% 1fr 27.1%;
-                margin-top: -2.5em;
+    header {    display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
     }
 
         #logo { width: 100px;
-                padding-top: 75px;
+                padding-top: 65px;
         }
 
         nav {   display: flex;
@@ -103,15 +156,25 @@ body {  margin-left: 3.47%;
             #menuAccommodation {  margin: 2em;
                                 border-top: 2px solid #0065FC;
                                 padding-top: 50px;
+                                align-items: center;
             }
 
             #menuActivities { margin: 2em;
-                            padding-top: 52px;                
+                            padding-top: 52px;
+                            align-items: center;                
             }
 
             #menuSubscribe {    margin: 2em;
-                                padding-top: 52px;               
+                                padding-top: 52px;
+                                align-items: center;              
             }
+
+
+
+
+
+
+
 
 
 
@@ -119,6 +182,13 @@ body {  margin-left: 3.47%;
     main {
 
     }
+
+
+
+
+
+
+
 
           /*   SEARCH AND FILTER   */
         #searchAndFilter {
@@ -137,15 +207,25 @@ body {  margin-left: 3.47%;
                 #hereButton {   background-color: #F2F2F2;
                                 padding: 0.6em 1em 0.6em 1em;
                                 border-radius: 10px 0 0 10px;
+                                height: 20px;
+                                object-fit: cover;
+                                object-position: center;
                 }
                 #adressBar {    font-family: "ralewayBold";
                                 border: none;
+                                border-top: 1px solid #F2F2F2;
+                                border-bottom: 1px solid #F2F2F2;
+                                height: 35px;
+                                object-fit: cover;
+                                object-position: center;
                 }
                 #searchButton { background-color: #0065FC;
                                 color: white;
-                                padding: 0.6em 1em 0.6em 1em;
+                                padding: 1em 1em 1em 1em;
                                 border: none;
                                 border-radius: 0 10px 10px 0;
+                                height: 39px;             object-fit: cover;
+                                object-position: center;
                 }
 
             #filter {   display: flex;
@@ -161,76 +241,95 @@ body {  margin-left: 3.47%;
                                 justify-content: center;
                                 align-items: center;
                                 padding: 1em;
+                                object-position: center;
                 }
                     .iconeFilter{   padding: 1em;
                                     background-color: #DEEBFF;
                                     border-radius: 50%;
                                     width: 15px;
                                     height: 15px;
-                                    object-fit: cover;
-                                    object-position: center;
                     }
 
                     .textFilter {   border-top: 1px solid #d9d9d9;
-                                    border-right: 1px solid #d9d9d9;
-                                    border-bottom: 1px solid #d9d9d9;
-                                    border-radius: 0 25px 25px 0;
-                                    width: 100px;
-                                    margin-left: -2em;
-                                    height: 37px;
+                        border-right: 1px solid #d9d9d9;
+                        border-bottom: 1px solid #d9d9d9;
+                        border-radius: 0 25px 25px 0;
+                        width: 150px;
+                        margin-left: -1em;
+                        height: 39px;
+                        object-position: center;
+ 
                     }
 
             #info { display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
 
             }
                 #infoIcon { border: 1px  #d9d9d9 solid;
-                            border-radius: 50%;
-                            width: 20px;
-                            height: 20px;
-                            object-fit: cover;
-                            object-position: center;
+                    border-radius: 50%;
+                    width: auto;
+                    height: auto;
+                    padding: 0.5em 0.9em 0.5em 0.9em;
                 }
     
-          /*   SECTION - ACCOMODATION IN MARSEILLES   */
-        #accommodationMarseilles {
-            padding: 40px;
-            background-color: #F2F2F2;
-            border-radius: 25px;
-            width: 880px;
-            height: 630px;
 
+
+
+
+
+
+          /*   SECTION - ACCOMODATION IN MARSEILLE AND POPULAR CSS GRID   */
+        #accommodationMarseilleAndPopular { padding-top: 1.5em;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2.78%;
+            grid-auto-rows: minmax(100px, auto)
         }
 
-            #blockAccommodationMarseilles {
+
+
+
+
+
+
+          /*   SECTION - ACCOMODATION IN MARSEILLE   */
+        #accommodationMarseille {  padding: 20px;
+            background-color: #F2F2F2;
+            border-radius: 25px;
+            width: auto;
+        }
+
+            #blockAccommodationMarseille { display: grid;
+                grid-template-columns: repeat(3, 1fr) ;
+                grid-template-rows: 1fr 1fr;
+                gap: 3.36%; 
                 height: 430px;
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-between;
-                align-items: stretch;
+                grid-auto-flow: column;             
             }
 
-                .accommodation {
-                    width: 28.1%;
-                    height: 31.75%;
-                    padding: 4px;
+
+
+                .accommodation {    padding: 4px;
                     background-color: white;
                     border-radius: 25px;
-                    box-shadow: 0px 0px 5px 0px #000000;;
+                    box-shadow: 0px 0px 2px 0px #c4c4c4;
+                    max-height: 200px;
                 }
 
-                    .fourStars, .threeStars, .fiveStars {
-
+                    .stars {    display: flex;
+                        flex-direction: row;
+                        justify-content: left;
+                        margin-top: -0.3em;
+                        padding-left: 0.6em;
                     }
 
-                    .accomodationImages {   
-                        width: 100%;
+                    .accomodationImages { width: 100%;
                         height: 60.53%;
                         border-radius: 25px 25px 0 0;
                         object-fit: cover;
-                        object-position: center;
+                        object-position: center;  
                     }
 
 
@@ -238,44 +337,163 @@ body {  margin-left: 3.47%;
 
     
           /*   SECTION - MOST POPULAR   */
-          #mostPopular {
-            
+          #mostPopular {    padding: 20px;
+            background-color: #F2F2F2;
+            border-radius: 25px;
+            width: auto;
         }
 
-            #mostPopularTitle {
-
+            #mostPopularTitle { display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: auto;
             }
 
-            #blockAccomodationPopular {
-
+            #blockAccomodationPopular { display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 3.36%;
+                grid-auto-flow: row; 
+                height: 530px;
             }
 
-                .popular {
+                .popular {  padding: 4px;
+                    background-color: white;
+                    border-radius: 25px;
+                    box-shadow: 0px 0px 2px 0px #c4c4c4;
+                    height: 145px;
 
+                    display: grid;
+                    grid-template-columns: 1.2fr 1.3fr;
+                    grid-template-rows: 1fr;
+                    gap: 3.36%;
+                    grid-auto-flow: column; 
                 }
+
+                .popularImages {    width: 100%;
+                    height: 145px;
+                    align-content: center;
+                    border-radius: 25px 0 0 25px;
+                    grid-column: 1;
+                    grid-row: 1;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                .blockTextAccomodationPopular { grid-column: 2;
+                    grid-row: 1;
+                    padding-top: 1.5em;
+                    margin-right: 0.5em;
+                }
+
+                .starsPopular {    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    margin-top: 2em;
+                    padding-left: 0.6em;
+                }
+
 
 
     
-          /*   SECTION - ACITIVITIES   */
-          #menuActivities {
-            
+          /*   SECTION - ACTIVITIES   */
+          #activitiesSection { padding-top: 3em;
+            margin-bottom: -3em;
         }
 
             #blockActivities {
-
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(6, 1fr) ;
+                grid-auto-flow: column;
+                gap: 3.37%;
+                height: 500px;
             }
 
-                .activities {
-
+                #blockActivities a:nth-child(1) {
+                    grid-column: 1;
+                    grid-row: 1 / 6;
                 }
+                #blockActivities a:nth-child(2) {
+                    grid-column: 2;
+                    grid-row: 1 / 4;
+                }
+                #blockActivities a:nth-child(3) {
+                    grid-column: 2;
+                    grid-row: 4 / 6;
+                }
+                #blockActivities a:nth-child(4) {
+                    grid-column: 3;
+                    grid-row: 1 / 6;
+                }
+                #blockActivities a:nth-child(5) {
+                    grid-column: 4;
+                    grid-row: 1 / 3;
+                }
+                #blockActivities a:nth-child(6) {
+                    grid-column: 4;
+                    grid-row: 3 / 6;
+                }
+                
+                .activities {   background-color: white;
+                    border-radius: 25px;
+                    box-shadow: 0px 0px 6px 0px #c4c4c4;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-content: center;;
+                    margin-bottom: 1.5em;
+                    padding-bottom: 1em;
+                }
+
+                    .activitiesImages { width: 100%;
+                        height: 100%;
+                        border-radius: 25px;
+                        object-fit: cover;
+                        object-position: center;
+                        z-index: 1;
+                        margin-bottom: 1.6em;
+
+                    }
+
+                    .activitiesTitle {  background-color: white;
+                        border-radius: 0 0 25px 25px;
+                        z-index: 2;
+                        justify-content: flex-end;
+                        margin-top: -4em;
+                        padding-top: 0.8em;
+                        padding-left: 1em;
+                        padding-bottom: 1em;
+                    }
+
+
+
+
+
+
+
+
 
 
         /*  ----- FOOTER -----   */
         footer {
-
+            background-color: #F2F2F2; 
+            margin-left: -4%;
+            margin-right: -4%;
+            margin-bottom: -4%; 
+            padding-bottom: 4%;          
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: center;
     }
 
         .menuFooter {
+            margin-left: 4%;
+            margin-right: 15%;
+            padding-top: 2%;
+
 
         }
 
