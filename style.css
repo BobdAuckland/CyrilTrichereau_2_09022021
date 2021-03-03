@@ -32,6 +32,7 @@ Desktop Version +1040px
 /* ----- LAYOUT TEXT -----   */
 
 body {  font-family: "raleway", "Arial Black", Arial, Verdana, sans-serif;
+    color: black;
 }
 
 h1 {    font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
@@ -59,9 +60,6 @@ h4 + p, h4 + em {   font-size: 1em;
     padding-left: 0.6em;
 }
 
-p{
-
-}
 
 a { text-decoration: none;
     color: black;
@@ -94,9 +92,7 @@ h1 + p{ font-size: 1em;
 
 .textFilter { font-size: 1em;
             font-family: "ralewayBold", "Arial Black", Arial, Verdana, sans-serif;
-            padding-left: 3em;
-            vertical-align: middle;
-            text-align: left;
+            white-space: nowrap;
 }
 
 #info p {   font-size: 1em;
@@ -153,6 +149,9 @@ body {  margin-left: 3.47%;
                 align-items: center;
         }
 
+        #menuSubscribeLogo {    display: none;
+        }
+
             #menuAccommodation {  margin: 2em;
                                 border-top: 2px solid #0065FC;
                                 padding-top: 50px;
@@ -179,25 +178,8 @@ body {  margin-left: 3.47%;
 
 
         /*  ----- MAIN -----   */
-    main {
-
-    }
-
-
-
-
-
-
-
 
           /*   SEARCH AND FILTER   */
-        #searchAndFilter {
-
-        }
-
-            #search {   
-            }
-
                 #searchBar {display: flex;
                             flex-direction: row;
                             justify-content: left;
@@ -208,8 +190,7 @@ body {  margin-left: 3.47%;
                                 padding: 0.6em 1em 0.6em 1em;
                                 border-radius: 10px 0 0 10px;
                                 height: 20px;
-                                object-fit: cover;
-                                object-position: center;
+
                 }
                 #adressBar {    font-family: "ralewayBold";
                                 border: none;
@@ -227,6 +208,8 @@ body {  margin-left: 3.47%;
                                 height: 39px;             object-fit: cover;
                                 object-position: center;
                 }
+                #searchIcon {display: none;
+                }
 
             #filter {   display: flex;
                         flex-direction: row;
@@ -238,28 +221,46 @@ body {  margin-left: 3.47%;
 
                 .filterButton { display: flex;
                                 flex-direction: row-reverse;
-                                justify-content: center;
+                                justify-content: left;
                                 align-items: center;
                                 padding: 1em;
-                                object-position: center;
                 }
-                    .iconeFilter{   padding: 1em;
-                                    background-color: #DEEBFF;
-                                    border-radius: 50%;
-                                    width: 15px;
-                                    height: 15px;
+                    .backgroundIcons {  background-color: #DEEBFF;
+                        border-radius: 50%;
+                        padding: 1.55em;
+                        z-index: 2;
+                    }
+
+                    #iconFilterEconomic {   z-index: 3;
+                        margin-left: -1.9em;
+                    }
+                    #iconFilterFamily {   z-index: 3;
+                        margin-left: -1.6em;
+                    }
+                    #iconFilterRomantic {   z-index: 3;
+                        margin-left: -1.7em;
+                    }
+                    #iconFilterAnimals {   z-index: 3;
+                        margin-left: -1.8em;
                     }
 
                     .textFilter {   border-top: 1px solid #d9d9d9;
                         border-right: 1px solid #d9d9d9;
                         border-bottom: 1px solid #d9d9d9;
                         border-radius: 0 25px 25px 0;
-                        width: 150px;
-                        margin-left: -1em;
-                        height: 39px;
-                        object-position: center;
- 
+                        width: auto;
+                        height: 2.9em;
+                        margin-left: -0.6em;
+                        padding-left: 2em;
+                        padding-right: 1.5em;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-content: flex-end;
+                        z-index: 1;
                     }
+
+
 
             #info { display: flex;
                 flex-direction: row;
@@ -308,8 +309,6 @@ body {  margin-left: 3.47%;
                 height: 430px;
                 grid-auto-flow: column;             
             }
-
-
 
                 .accommodation {    padding: 4px;
                     background-color: white;
@@ -454,17 +453,16 @@ body {  margin-left: 3.47%;
                         object-position: center;
                         z-index: 1;
                         margin-bottom: 1.6em;
-
                     }
 
                     .activitiesTitle {  background-color: white;
                         border-radius: 0 0 25px 25px;
                         z-index: 2;
-                        justify-content: flex-end;
-                        margin-top: -4em;
+                        margin-top: -3em;
                         padding-top: 0.8em;
                         padding-left: 1em;
                         padding-bottom: 1em;
+                        margin-bottom: -1em;
                     }
 
 
@@ -493,8 +491,6 @@ body {  margin-left: 3.47%;
             margin-left: 4%;
             margin-right: 15%;
             padding-top: 2%;
-
-
         }
 
 
@@ -507,3 +503,533 @@ body {  margin-left: 3.47%;
 
 
 
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    /*---------------- MOBILE VERSION ----------------*/
+
+
+
+@media screen and (max-width: 425px) {
+            
+/* ----- LAYOUT TEXT -----   */
+
+p {     font-size: 0.9em;
+}
+
+h4 + p, h4 + em {   font-size: 0.9em;
+}
+
+#menuAccommodation a {  font-size: 0.9em;
+    text-align: center;
+}
+
+#menuActivities a { font-size: 0.9em;
+    text-align: center;
+}
+
+#menuSubscribeLogo p {  color: #0065FC;
+    font-family: "ralewayBold";
+    font-size: 0.9em;
+    text-align: right;
+}
+
+#filterTitle {  margin-bottom: -0.2em;
+}
+
+.textFilter {   font-size: 0.9em;
+}
+
+#info p {   font-size: 0.9em;
+}
+
+
+
+
+
+/*   ----- LAYOUT BLOCKS -----   */
+
+body { margin: 0;
+}
+
+        /*  ----- HEADER -----   */
+    header {    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+        background-color: white;
+        z-index: 10;
+    }
+
+        #headbandLogo { display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: center;
+        }
+
+            #logo {width: 6em;
+                padding: 0 0 0 1em;
+            }
+
+            #menuSubscribeLogo {    display: unset;
+                padding: 0.6em 0 0 11em;
+            }
+
+        
+
+        nav {   display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: flex-start;
+            margin: -0.9em 0 -2em 0;
+        }
+
+            #menuAccommodation {    border-bottom: 3px solid #0065FC;
+                border-top: none;
+                padding: 0 0 1.1em 0;
+            }
+
+            #menuActivities {    border-bottom: 3px solid #F2F2F2;
+                padding: 0 0 1.1em 0;
+            }
+
+            #menuSubscribe {    display: none;            
+            }
+
+
+
+
+        /*  ----- MAIN -----   */
+main {  padding: 12em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+}
+          /*   SEARCH AND FILTER   */
+    #searchAndFilter {  padding: 0 5.87% 0 5.87%;
+        margin-top: -10em;
+    }
+        #searchBar {    padding-top: 1em;
+        }    
+
+            #adressBar { width: 93%;
+            }
+            #searchButton { display: none;
+            }
+            #searchIcon {display: unset;
+                background-color: #0065FC;
+                color: white;
+                padding: 1em;
+                border: none;
+                border-radius: 10px;
+                height: 39px;             
+                width: auto;
+            }
+
+            #filter {   display: flex;
+                flex-flow: column wrap;
+                justify-content: initial;
+                align-items: flex-start;
+                padding-top: 1em;
+                margin-left: -1em;
+                height: 225px;
+            }
+
+                .filterButton { padding: 0 0 0em 1em;
+                    margin-bottom: -1em;
+                }
+                    .backgroundIcons {  padding: 1.37em;
+                    }
+
+                    #iconFilterEconomic {   margin-left: -1.8em;
+                    }
+                    #iconFilterFamily {   margin-left: -1.5em;
+                    }
+                    #iconFilterRomantic {   margin-left: -1.6em;
+                    }
+                    #iconFilterAnimals {   margin-left: -1.65em;
+                    }
+                
+                #filter a:nth-child(3) {  order: 5;
+                    padding-top: 1.9em;
+                    margin-left: -1.5em;
+                }
+
+
+
+
+          /*   SECTION - ACCOMODATION IN MARSEILLE AND POPULAR CSS GRID   */
+        #accommodationMarseilleAndPopular { display: flex;
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            align-content: center;
+            padding: 2em 0 0 0;
+        }
+
+   
+          /*   SECTION - MOST POPULAR   */
+          #mostPopular {    background-color: #F2F2F2;
+            background-size: cover;
+            border-radius: initial;
+            width: auto;
+            padding: 0;
+        }
+
+            #mostPopularTitle {  padding: 1.5em 5.87% 0.5em 5.87%;
+                margin: 0 0 0 -0.5em;
+            }
+
+            #blockAccomodationPopular {  padding: 0 5.87% 0 5.87%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: center;
+            }
+
+                .popular {  margin: -0.4em 0 0 0;
+                }
+
+    
+
+
+          /*   SECTION - ACCOMODATION IN MARSEILLE   */
+        #accommodationMarseille {   background: none;
+            border: none;
+            padding: 2em 5.87% 0 5.87%;
+        }
+
+        #accommodationMarseille h2 {    margin: 0 0 0 -0.5em;
+        }
+
+            #blockAccommodationMarseille {  padding: 1em 0 0 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: center;       
+            }
+
+            #blockAccommodationMarseille div:nth-child(1) {
+                order: 1;
+            }
+            #blockAccommodationMarseille div:nth-child(2) {
+                order: 4;
+            }
+            #blockAccommodationMarseille div:nth-child(3) {
+                order: 2;
+            }
+            #blockAccommodationMarseille div:nth-child(4) {
+                order: 5;
+            }
+            #blockAccommodationMarseille div:nth-child(5) {
+                order: 3;
+            }
+            #blockAccommodationMarseille div:nth-child(6) {
+                order: 6;
+            }
+
+        #more { padding: 57.5em 0 0 0;
+            margin: 0;
+        }
+
+ 
+          /*   SECTION - ACTIVITIES   */
+        #activitiesSection {  margin: 0;
+            padding: 3em 5.87% 31em 5.87%;
+        }
+
+        #activitiesSection h2 {    margin: 0 0 0 -0.5em;
+                padding-bottom: 1.5em;
+        }
+
+            #blockActivities {  display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: center;
+            }
+                .activities {   max-height: 7.5em;
+                    margin-bottom: 0.6em;
+                }
+
+
+
+
+
+
+        /*  ----- FOOTER -----   */
+        footer {    display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: center;
+            padding: 1em 5.87% 3em 5.87%;
+    }
+
+        .menuFooter {   padding: 0;
+            margin: 0;
+            padding: 0 5.87% 0 5.87%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    /*---------------- TABLET VERSION ----------------*/
+
+@media all and (min-width: 425px) and (max-width: 1440px)
+{
+  
+            
+/* ----- LAYOUT TEXT -----   */
+
+body {  
+}
+
+h1 {    
+}
+
+h2 {    
+}
+
+h3 {    
+}
+
+h4 {    
+}
+
+h4 + p, h4 + em {   
+}
+
+
+a { 
+}
+
+em { 
+}
+
+h1 + p{ 
+}
+
+#menuAccommodation a {  
+}
+
+#menuActivities a {
+}
+
+#menuSubscribe a {  
+}
+
+#filterTitle {
+}
+
+.textFilter { 
+}
+
+#info p {
+}
+
+#more {
+}
+
+
+
+
+
+
+
+
+/*   ----- LAYOUT BLOCKS -----   */
+
+body {  
+}
+
+
+
+
+
+
+
+        /*  ----- HEADER -----   */
+    header {
+    }
+
+        #logo {
+        }
+
+        nav {
+        }
+
+            #menuAccommodation {
+            }
+
+            #menuActivities { 
+            }
+
+            #menuSubscribe {             
+            }
+
+
+
+
+        /*  ----- MAIN -----   */
+
+          /*   SEARCH AND FILTER   */
+                #searchBar {
+                }
+
+                #hereButton {
+                }
+                #adressBar { 
+                }
+                #searchButton {
+                }
+
+            #filter { 
+            }
+
+                .filterButton {
+                }
+                    .iconFilter{
+                    }
+
+                    .textFilter {
+                    }
+
+            #info {
+            }
+                #infoIcon {
+                }
+    
+
+
+
+
+
+
+          /*   SECTION - ACCOMODATION IN MARSEILLE AND POPULAR CSS GRID   */
+        #accommodationMarseilleAndPopular {
+        }
+
+
+
+
+          /*   SECTION - ACCOMODATION IN MARSEILLE   */
+        #accommodationMarseille {
+        }
+
+            #blockAccommodationMarseille {       
+            }
+
+
+
+                .accommodation {
+                }
+
+                    .stars {
+                    }
+
+                    .accomodationImages { 
+                    }
+
+
+
+
+    
+          /*   SECTION - MOST POPULAR   */
+          #mostPopular {
+        }
+
+            #mostPopularTitle {
+            }
+
+            #blockAccomodationPopular {
+            }
+
+                .popular { 
+                }
+
+                .popularImages {
+                }
+
+                .blockTextAccomodationPopular {
+                }
+
+                .starsPopular {
+                }
+
+
+
+    
+          /*   SECTION - ACTIVITIES   */
+          #activitiesSection {
+        }
+
+            #blockActivities {
+            }
+                .activities {
+                }
+
+                    .activitiesImages {
+
+                    }
+
+                    .activitiesTitle {
+                    }
+
+
+
+
+
+
+
+
+
+
+        /*  ----- FOOTER -----   */
+        footer {
+    }
+
+        .menuFooter {
+        }
+    
+
+
+
+
+
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    /*---------------- FIREFOX VERSION ----------------*/
+
+
+
+@-moz-document url-prefix() {
+    h1, p{
+      color:pink;
+    }
+  } 
