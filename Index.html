@@ -52,7 +52,10 @@
 
           <!-- HEADER -->  
     <header>
-      <img id="logo" src="icone/Logo_Reservia.svg" alt="Logo Reservia" title="Logo Reservia"/>
+      <div id="headbandLogo">
+        <img id="logo" src="icone/Logo_Reservia.svg" alt="Logo Reservia" title="Logo Reservia"/>
+        <a id="menuSubscribeLogo" href="" title="S'inscrire"><p>S'inscrire</p></a>
+      </div>
       <nav>
         <p id="menuAccommodation"><a href="#accommodationMarseille" title="Hébergements">Hébergements</a></p>
         <p id="menuActivities"><a href="#activitiesSection" title="Activités">Activités</a></p>
@@ -77,10 +80,11 @@
         <div id="search">
           <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
           <p>En plein centre ville ou en pleine nature</p>
-          <form action="" method="get" accept-charset="utf-8" id="searchBar">
+          <form id="searchBar" action="" method="get" accept-charset="utf-8">
             <i class="fas fa-map-marker-alt" id="hereButton" alt="Localisez moi" title="Localisez moi"></i>
             <input id="adressBar" type="text" name="adress" placeholder="Marseille, France" size="30" required>
             <input id="searchButton" type="submit" value="Rechercher">
+            <button id="searchIcon"><i class="fas fa-search"></i></button>
           </form>
         </div>
         
@@ -88,23 +92,27 @@
           <p id="filterTitle">Filtres</p>
           
           <a href="" class="filterButton">
-            <div class="textFilter"><p>Economique</p></div>
-            <span class="iconeFilter" style="font-size: 0.9em; color: #0065FC;"><i class="fas fa-money-bill-wave-alt" alt="Economique" title="Economique"></i></span>
+            <p class="textFilter">Economique</p>
+            <span id="iconFilterEconomic" style="font-size: 1.1em; color: #0065FC;"><i class="fas fa-money-bill-wave-alt" alt="Economique" title="Economique"></i></span>
+            <div class="backgroundIcons"></div>
           </a>    
           
           <a href="" class="filterButton">
-            <div class="textFilter"><p>Familial</p></div>
-            <span class="iconeFilter" style="font-size: 0.9em; color: #0065FC;"><i class="fas fa-child" alt="Familial" title="Familial"></i></span>
+            <p class="textFilter">Familial</p>
+            <span id="iconFilterFamily" style="font-size: 1.2em; color: #0065FC;"><i class="fas fa-child" alt="Familial" title="Familial"></i></span>
+            <div class="backgroundIcons"></div>
           </a>
            
           <a href="" class="filterButton">
-            <div class="textFilter"><p>Romantique</p></div>
-            <span class="iconeFilter" style="font-size: 0.9em; color: #0065FC;"><i class="fas fa-heart" alt="Romantique" title="Romantique"></i></span>
+            <p class="textFilter">Romantique</p>
+            <span id="iconFilterRomantic" style="font-size: 1.2em; color: #0065FC;"><i class="fas fa-heart" alt="Romantique" title="Romantique"></i></span>
+            <div class="backgroundIcons"></div>
           </a>
                   
           <a href="" class="filterButton">
-            <div class="textFilter"><p>Animaux autorisés</p></div>
-            <span class="iconeFilter" style="font-size: 0.9em; color: #0065FC;"><i class="fas fa-dog" alt="Animaux autorisés" title="Animaux autorisés"></i></span>
+            <p class="textFilter">Animaux autorisés</p>
+            <span id="iconFilterAnimals" style="font-size: 1.2em; color: #0065FC;"><i class="fas fa-dog" alt="Animaux autorisés" title="Animaux autorisés"></i></span>
+            <div class="backgroundIcons"></div>
           </a>
         </div>
         
@@ -132,8 +140,8 @@
         <div id="blockAccommodationMarseille">
           <div class="accommodation">
             <a href="">
-            <img class="accomodationImages" src="image/4_small_hebergement_07.jpg" alt="Auberge de la Cannebière" title="Auberge de la Cannebière"/>
-            <h4>Auberge de la Cannebière</h4>
+            <img class="accomodationImages" src="image/4_small_hebergement_07.jpg" alt="Auberge la Cannebière" title="Auberge la Cannebière"/>
+            <h4>Auberge la Cannebière</h4>
             <p>Nuit à partir de <em>25 €</em></p>
             <div class="stars">
               <span style="font-size: 0.8em; color: #0065fc;"><i class="fas fa-star"></i></span>
