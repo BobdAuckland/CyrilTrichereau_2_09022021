@@ -94,8 +94,8 @@ h1 + p{ font-size: 1em;
 
 /*   ----- LAYOUT BLOCKS -----   */
 
-body {  margin-left: 3.47%;
-    margin-right: 3.47%;
+body {  width: 93.06%;
+    margin: auto;
 }
 
         /*  ----- HEADER -----   */
@@ -442,13 +442,15 @@ body {  margin-left: 3.47%;
             
 /* ----- LAYOUT TEXT -----   */
 
-p {     font-size: 0.9em;
+p {     
+    font-size: 0.9em;
 }
 
 h4 + p, h4 + em {   font-size: 0.9em;
 }
 
-#menuAccommodation a {  font-size: 0.9em;
+#menuAccommodation a {  
+    font-size: 0.9em;
     text-align: center;
 }
 
@@ -480,6 +482,10 @@ h4 + p, h4 + em {   font-size: 0.9em;
 body { margin: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
         /*  ----- HEADER -----   */
     header {    display: flex;
         flex-direction: column;
@@ -505,18 +511,27 @@ body { margin: 0;
 
         nav {   display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            align-content: flex-start;
-            margin: -0.9em 0 -2em 0;
+            justify-content: center;
+            align-items: center;
+            margin: -0.9em auto -2em auto;
+            background-color: green;
+            border: 2px green solid;
+            width: 90%;
         }
 
             #menuAccommodation {    border-bottom: 3px solid #0065FC;
                 border-top: none;
                 padding: 0 0 1.1em 0;
+                background-color: red;
+                margin: 0;
+                width: 50%;
             }
 
             #menuActivities {    border-bottom: 3px solid #F2F2F2;
                 padding: 0 0 1.1em 0;
+                background-color: red;
+                margin: 0;
+                width: 50%;
             }
 
             #menuSubscribe {    display: none;            
@@ -901,3 +916,6 @@ body {  margin: 0 5.87% 0 5.87%;
 
     }
     
+#iconFilterRomantic{
+    font-size: 4em;
+}
