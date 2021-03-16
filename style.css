@@ -118,13 +118,19 @@ h1 + p, footer p {
 }
 
 body {  
-    width: 93.06%;
+    width: 100%;
+    max-width: 2000px;
     height: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
         /*  ----- HEADER -----   */
-    header {    
+    header { 
+        width: 93.06%;    
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -140,10 +146,6 @@ body {
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
-        }
-
-        #menuSubscribeLogo {    
-            display: none;
         }
 
             #menuAccomodation {  
@@ -169,6 +171,9 @@ body {
         /*  ----- MAIN -----   */
           /*   SEARCH AND FILTER   */
 
+    main {
+        width: 93.06%; 
+    }
         #searchBar {
             display: flex;
             flex-direction: row;
@@ -608,20 +613,20 @@ body {
 
 
         /*  ----- FOOTER -----   */
-        footer {         
+        footer {     
+            width: 100%;     
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            align-items: center; 
-            margin-left: -4%;
-            margin-right: -4%;
+            align-items: center;
             margin-bottom: -4%; 
             padding-bottom: 4%; 
             background-color: #F2F2F2;
             white-space: nowrap;
         }
 
-        .menuFooter {   
+        .menuFooter {
+            width: 93.06%;    
             margin-left: 4%;
             margin-right: 15%;
             padding-top: 2%;
@@ -733,11 +738,6 @@ body {
                 padding: 0;
             }
 
-            #menuSubscribeLogo {    
-                display: unset;
-                padding: 0 0.5em 0 0;
-            }
-
         nav {   
             display: flex;
             flex-direction: row;
@@ -745,7 +745,7 @@ body {
             align-items: flex-end;
             width: 100%;
             height: 50%;
-            margin: 0;
+            margin: -2rem 0 0 0;
             padding: 0;
         }
 
@@ -772,8 +772,12 @@ body {
                 border-bottom: 3px solid #F2F2F2;
             }
 
-            #menuSubscribe {    
-                display: none;            
+            #menuSubscribe { 
+                position: absolute;
+                top: 2.54rem; 
+                right: 5.87%;    
+                margin: 0;
+                padding: 0;         
             }
 
 
@@ -782,7 +786,8 @@ body {
         width: 100%;
 }
 
-main {
+main { 
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1128,44 +1133,47 @@ h4 + p, h4 + em {
                 padding: 0 0.5em 0 0;
             }
 
-        nav {   
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-end;
-            width: 100%;
-            height: 50%;
-            margin: 0;
-            padding: 0;
-        }
-
-            #menuAccomodation { 
+            nav {   
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                width: 50%;
-                padding: 0 0 1.1rem 0;
-                margin: 0;        
-                border-bottom: 3px solid #0065FC;
-                border-top: none;
+                align-items: flex-end;
+                width: 100%;
+                height: 50%;
+                margin: -2rem 0 0 0;
+                padding: 0;
             }
-
-            #menuActivities {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                width: 50%;
-                padding: 0 0 1.1rem 0;
-                margin: 0;    
-                border-bottom: 3px solid #F2F2F2;
-            }
-
-            #menuSubscribe {    
-                display: none;            
-            }
-
+    
+                #menuAccomodation { 
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    padding: 0 0 1.1rem 0;
+                    margin: 0;        
+                    border-bottom: 3px solid #0065FC;
+                    border-top: none;
+                }
+    
+                #menuActivities {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    padding: 0 0 1.1rem 0;
+                    margin: 0;    
+                    border-bottom: 3px solid #F2F2F2;
+                }
+    
+                #menuSubscribe { 
+                    position: absolute;
+                    top: 2.54rem; 
+                    right: 2rem;    
+                    margin: 0;
+                    padding: 0;         
+                }
 
 
         /*  ----- MAIN -----   */
@@ -1343,14 +1351,15 @@ h4 + p, h4 + em {
 
 
              /*  ----- FOOTER -----   */
-        footer {         
+        footer {        
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-start;
             align-items: center;
         }
     
-            .menuFooter {   
+            .menuFooter {
+                width: auto;    
                 padding-top: 2%;
             }
 }
@@ -1391,14 +1400,3 @@ h4 + p, h4 + em {
 
 
 
-
-
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-    /*---------------- DESKTOP XXL VERSION ----------------*/
-
-    @media all and (min-width: 1660px)
-    {
-
-
-    }
